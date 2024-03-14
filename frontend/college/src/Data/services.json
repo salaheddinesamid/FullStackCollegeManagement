@@ -1,0 +1,20 @@
+{
+    "services":[
+        {
+            "name":"Dashboard",
+            "logo":faCoffee
+        },
+        {
+            "name":"Teachers",
+            "logo":""
+        },
+        {
+            "name":"Students",
+            "logo":""
+        },
+        {
+            "name":"Event",
+            "logo":""
+        }
+    ]
+}
