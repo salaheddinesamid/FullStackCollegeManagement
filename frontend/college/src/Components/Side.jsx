@@ -35,6 +35,7 @@ export function Side(){
                                 height:"100px",
                                 padding:"10px 90px"
                             }}/></h3>
+                            
                             </div>
                            
                         </div>

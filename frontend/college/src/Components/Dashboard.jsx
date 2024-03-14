@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faArrowUp, faHeart } from "@fortawesome/free-solid-svg-icons";
 export function Dashboard(){
     const earning = 20.4576;
     const expenses = 10.897;
@@ -19,12 +19,32 @@ export function Dashboard(){
             "name":"Recent students"
         },
         {
-            "name":"Coursers"
+            "name":"Courses"
+        }
+    ]
+    const recentActivities = [
+        {
+            "name":"New student in Computer Science major",
+            "date":"just now",
+            "status":"requested",
+            "logo": faHeart
+        },
+        {
+            "name":"New student in Engineering major",
+            "date":"1 day ago",
+            "status":"completed",
+            "logo": faHeart
+        },
+        {
+            "name":"Editing examination results",
+            "date":"1 day ago",
+            "status":"completed",
+            "logo": faHeart
         }
     ]
     return(
         <div className="row">
-            <div className="row">
+            <div className="row mt-2">
                 <Header/>
             </div>
             <div className="row mt-4">
@@ -103,6 +123,44 @@ export function Dashboard(){
                             </div>
                             <div className="col-xl-6"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="row mt-4">
+                <div className="row mt-3">
+                    <div className="col-xl-12">
+                        <h3><b>Recent Activities:</b></h3>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="row mt-3">
+                        {recentActivities.map((activity)=>(
+                            <div className="row mt-2" style={{
+                                border:"0.3px solid gray",
+                                borderRadius:"10px"
+                            }}>
+                                <div className="row align-items-center">
+                                    <div className="col-xl-1 ">
+                                        <FontAwesomeIcon icon={activity.logo}/>
+                                    </div>
+                                    <div className="col-xl-8">
+                                        <div className="row">
+                                            <div className="col-xl-10">
+                                                <p><b>Activity:</b> {activity.name}</p>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-xl-10">
+                                                <p><b>Status:</b> {activity.status}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-xl-2">
+                                        <p>{activity.date}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

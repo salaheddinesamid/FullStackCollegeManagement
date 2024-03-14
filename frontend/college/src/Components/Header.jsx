@@ -7,7 +7,7 @@ export function Header(){
             <div className="row align-items-center">
                 <div className="col-xl-3">
                     <h3 style={{
-                        color:"gray"
+                        
                     }}>Dashboard</h3>
                 </div>
                 <div className="col-xl-3">
